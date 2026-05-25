@@ -11,7 +11,6 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         :root {
             color-scheme: dark;
             --bg-primary: #0F1419;
@@ -27,23 +26,19 @@
             --accent-blue: #3B82F6;
             --shadow-sm: 0 8px 24px rgba(0, 0, 0, 0.4);
         }
-
         html, body {
             height: 100%;
         }
-
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: var(--bg-primary);
             color: var(--text-primary);
             padding: 32px;
         }
-
         .container {
             max-width: 1400px;
             margin: 0 auto;
         }
-
         /* Header */
         .header {
             display: flex;
@@ -54,14 +49,12 @@
             border-bottom: 1px solid var(--border-color);
             gap: 32px;
         }
-
         .header-left {
             display: flex;
             flex-direction: column;
             gap: 6px;
             flex: 1;
         }
-
         .header-left h1 {
             font-size: 28px;
             font-weight: 700;
@@ -69,7 +62,6 @@
             color: var(--text-primary);
             letter-spacing: -0.5px;
         }
-
         .header-subtitle {
             font-size: 12px;
             color: rgba(255, 255, 255, 0.5);
@@ -77,20 +69,17 @@
             letter-spacing: 0.3px;
             text-transform: uppercase;
         }
-
         .header-controls {
             display: flex;
             align-items: center;
             gap: 12px;
             white-space: nowrap;
         }
-
         .week-selector {
             display: flex;
             align-items: center;
             gap: 8px;
         }
-
         .week-selector-label {
             font-size: 11px;
             color: rgba(255, 255, 255, 0.5);
@@ -98,7 +87,6 @@
             text-transform: uppercase;
             letter-spacing: 0.3px;
         }
-
         .week-selector select {
             padding: 10px 12px;
             background: var(--bg-card);
@@ -109,19 +97,20 @@
             font-weight: 500;
             cursor: pointer;
             transition: all 0.2s;
-            min-width: 140px;
+            min-width: 200px;
         }
-
         .week-selector select:hover {
             border-color: var(--accent-cyan);
         }
-
         .week-selector select:focus {
             outline: none;
             border-color: var(--accent-cyan);
             box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
         }
-
+        .week-selector select option {
+            background: #1A202C;
+            color: #FFFFFF;
+        }
         /* Metrics Row */
         .metrics-row {
             display: grid;
@@ -129,11 +118,9 @@
             gap: 24px;
             margin-bottom: 40px;
         }
-
         .metric-card {
             background-color: var(--bg-card);
-            border: 1.5px solid;
-            border-image: linear-gradient(180deg, rgba(100, 180, 255, 0.4) 0%, rgba(100, 180, 255, 0) 100%) 1;
+            border: 1.5px solid rgba(100, 180, 255, 0.15);
             box-shadow: var(--shadow-sm);
             border-radius: 14px;
             padding: 24px;
@@ -141,18 +128,13 @@
             transition: all 0.3s ease;
             overflow: hidden;
         }
-
         .metric-card:hover {
             border-color: var(--accent-cyan);
             box-shadow: 0 12px 32px rgba(14, 165, 233, 0.15);
         }
-
         .metric-card.primary {
             border-top: 4px solid var(--accent-success);
-            border-top-left-radius: 14px;
-            border-top-right-radius: 14px;
         }
-
         .metric-icon {
             font-size: 56px;
             position: absolute;
@@ -160,7 +142,6 @@
             right: 14px;
             opacity: 0.7;
         }
-
         .metric-label {
             font-size: 12px;
             color: rgba(255, 255, 255, 0.6);
@@ -169,7 +150,6 @@
             margin-bottom: 8px;
             font-weight: 500;
         }
-
         .metric-value {
             font-size: 3rem;
             font-weight: 700;
@@ -177,22 +157,18 @@
             margin-bottom: 12px;
             line-height: 1;
         }
-
         .metric-change {
             font-size: 14px;
             font-weight: 700;
             display: inline-block;
             padding: 2px 0;
         }
-
         .metric-change.up {
             color: var(--accent-success);
         }
-
         .metric-change.down {
             color: var(--accent-danger);
         }
-
         /* Charts Grid */
         .charts-grid {
             display: grid;
@@ -200,7 +176,6 @@
             gap: 24px;
             margin-bottom: 40px;
         }
-
         .chart-card {
             background-color: var(--bg-card);
             border: 1.5px solid var(--border-color);
@@ -209,24 +184,20 @@
             padding: 24px;
             transition: all 0.3s ease;
         }
-
         .chart-card:hover {
             border-color: var(--accent-cyan);
             box-shadow: 0 12px 32px rgba(14, 165, 233, 0.1);
         }
-
         .chart-title {
             font-size: 15px;
             font-weight: 600;
             color: var(--text-primary);
             margin-bottom: 20px;
         }
-
         .chart-canvas {
             position: relative;
             height: 420px;
         }
-
         /* Stats Grid */
         .stats-grid {
             display: grid;
@@ -234,7 +205,6 @@
             gap: 24px;
             margin-bottom: 40px;
         }
-
         .stat-card {
             background-color: var(--bg-card);
             border: 1.5px solid var(--border-color);
@@ -243,7 +213,6 @@
             padding: 20px;
             text-align: center;
         }
-
         .stat-label {
             font-size: 11px;
             color: rgba(255, 255, 255, 0.6);
@@ -252,19 +221,16 @@
             margin-bottom: 12px;
             font-weight: 500;
         }
-
         .stat-value {
             font-size: 2rem;
             font-weight: 700;
             color: var(--text-primary);
         }
-
         .stat-subtitle {
             font-size: 0.8rem;
             color: var(--text-muted);
             margin-top: 6px;
         }
-
         .comparison-section {
             background-color: var(--bg-card);
             border: 1.5px solid var(--border-color);
@@ -273,27 +239,23 @@
             padding: 24px;
             margin-bottom: 32px;
         }
-
         .section-title {
             font-size: 15px;
             font-weight: 600;
             color: var(--text-primary);
             margin-bottom: 20px;
         }
-
         .comparison-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
             gap: 16px;
         }
-
         .comparison-item {
             background: rgba(255, 255, 255, 0.03);
             padding: 16px;
             border-radius: 10px;
             border: 1px solid var(--border-color);
         }
-
         .comparison-label {
             font-size: 11px;
             color: rgba(255, 255, 255, 0.6);
@@ -302,43 +264,35 @@
             margin-bottom: 8px;
             font-weight: 500;
         }
-
         .comparison-value {
             font-size: 1.5rem;
             font-weight: 700;
             color: var(--text-primary);
         }
-
         .comparison-delta {
             font-size: 12px;
             margin-top: 8px;
             font-weight: 600;
         }
-
         .comparison-delta.positive {
             color: var(--accent-success);
         }
-
         .comparison-delta.negative {
             color: var(--accent-danger);
         }
-
         /* Responsive */
         @media (max-width: 1024px) {
             .charts-grid {
                 grid-template-columns: 1fr;
             }
-
             .stats-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
         }
-
         @media (max-width: 768px) {
             body {
                 padding: 20px;
             }
-
             .header {
                 flex-direction: column;
                 align-items: flex-start;
@@ -346,43 +300,34 @@
                 margin-bottom: 24px;
                 padding-bottom: 20px;
             }
-
             .header-left h1 {
                 font-size: 22px;
             }
-
             .header-controls {
                 width: 100%;
             }
-
             .week-selector {
                 width: 100%;
                 justify-content: space-between;
             }
-
             .week-selector select {
                 flex: 1;
             }
-
             .metrics-row {
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
-
             .charts-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
-
             .stats-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
-
             .metric-value {
                 font-size: 2.5rem;
             }
-
             .chart-canvas {
                 height: 300px;
             }
@@ -403,72 +348,69 @@
                 </div>
             </div>
         </div>
-
         <div id="content"></div>
     </div>
-
     <script>
         // ========================================
         // EDIT YOUR DATA HERE
         // ========================================
         const kpiData = [
-  {
-      
-    "weekStart": "2026-04-20",
-    "weekLabel": "Apr 20, 2026 - Apr 26, 2026",
-    "totalLeads": 105,
-    "dials": 773,
-    "convos": 19,
-    "pickUps": 76,
-    "bookedAppointments": 0,
-    "answerRate": 2.46,
-    "convToBooking": 0.00
-  },
-  {
-    "weekStart": "2026-04-27",
-    "weekLabel": "Apr 27, 2026 - May 3, 2026",
-    "totalLeads": 17,
-    "dials": 1599,
-    "convos": 17,
-    "pickUps": 59,
-    "bookedAppointments": 4,
-    "answerRate": 1.06,
-    "convToBooking": 23.53
-  },
-  {
-    "weekStart": "2026-05-04",
-    "weekLabel": "May 4, 2026 - May 10, 2026",
-    "totalLeads": 9,
-    "dials": 1264,
-    "convos": 4,
-    "pickUps": 43,
-    "bookedAppointments": 2,
-    "answerRate": 0.32,
-    "convToBooking": 50.0
-  },
-  {
-    "weekStart": "2026-05-11",
-    "weekLabel": "May 11, 2026 - May 17, 2026",
-    "totalLeads": 20,
-    "dials": 583,
-    "convos": 4,
-    "pickUps": 17,
-    "bookedAppointments": 1,
-    "answerRate": 0.69,
-    "convToBooking": 25.0
-  },
-  {
-    "weekStart": "2026-05-18",
-    "weekLabel": "May 18, 2026 - May 24, 2026",
-    "totalLeads": 14,
-    "dials": 414,
-    "convos": 3,
-    "pickUps": 7,
-    "bookedAppointments": 0,
-    "answerRate": 0.72,
-    "convToBooking": 00.0
-  }
-];
+          {
+            "weekStart": "2026-04-20",
+            "weekLabel": "Apr 20 – Apr 26, 2026",
+            "totalLeads": 105,
+            "dials": 773,
+            "convos": 19,
+            "pickUps": 76,
+            "bookedAppointments": 0,
+            "answerRate": 2.46,
+            "convToBooking": 0.0
+          },
+          {
+            "weekStart": "2026-04-27",
+            "weekLabel": "Apr 27 – May 3, 2026",
+            "totalLeads": 17,
+            "dials": 1599,
+            "convos": 17,
+            "pickUps": 59,
+            "bookedAppointments": 4,
+            "answerRate": 1.06,
+            "convToBooking": 23.53
+          },
+          {
+            "weekStart": "2026-05-04",
+            "weekLabel": "May 4 – May 10, 2026",
+            "totalLeads": 9,
+            "dials": 1264,
+            "convos": 4,
+            "pickUps": 43,
+            "bookedAppointments": 2,
+            "answerRate": 0.32,
+            "convToBooking": 50.0
+          },
+          {
+            "weekStart": "2026-05-11",
+            "weekLabel": "May 11 – May 17, 2026",
+            "totalLeads": 20,
+            "dials": 583,
+            "convos": 4,
+            "pickUps": 17,
+            "bookedAppointments": 1,
+            "answerRate": 0.69,
+            "convToBooking": 25.0
+          },
+          {
+            "weekStart": "2026-05-18",
+            "weekLabel": "May 18 – May 24, 2026",
+            "totalLeads": 14,
+            "dials": 414,
+            "convos": 3,
+            "pickUps": 7,
+            "bookedAppointments": 0,
+            "answerRate": 0.72,
+            "convToBooking": 0.0
+          }
+        ];
         // ========================================
 
         let currentWeekIndex = kpiData.length - 1;
@@ -477,11 +419,9 @@
         function getCurrentWeek() {
             return kpiData[currentWeekIndex];
         }
-
         function getPreviousWeek() {
             return currentWeekIndex > 0 ? kpiData[currentWeekIndex - 1] : null;
         }
-
         function getChangePercent(current, previous) {
             if (!previous || previous === 0) return 0;
             return ((current - previous) / previous * 100).toFixed(0);
@@ -508,10 +448,9 @@
             const content = document.getElementById('content');
             let html = '';
 
-            // Top Metrics Row (4 KPIs)
+            // Top Metrics Row
             html += '<div class="metrics-row">';
 
-            // Total Leads
             const leadsChange = prev ? getChangePercent(week.totalLeads, prev.totalLeads) : 0;
             html += `
                 <div class="metric-card primary">
@@ -526,7 +465,6 @@
                 </div>
             `;
 
-            // Dials
             const dialsChange = prev ? getChangePercent(week.dials, prev.dials) : 0;
             html += `
                 <div class="metric-card">
@@ -541,7 +479,6 @@
                 </div>
             `;
 
-            // Conversations
             const convosChange = prev ? getChangePercent(week.convos, prev.convos) : 0;
             html += `
                 <div class="metric-card">
@@ -556,7 +493,6 @@
                 </div>
             `;
 
-            // Booked Appointments
             const bookedChange = prev ? getChangePercent(week.bookedAppointments, prev.bookedAppointments) : 0;
             html += `
                 <div class="metric-card primary">
@@ -570,13 +506,12 @@
                     </div>
                 </div>
             `;
-
             html += '</div>';
 
             // Charts Section
             html += '<div class="charts-grid">';
             html += '<div class="chart-card"><div class="chart-title">Dials Trend</div><div class="chart-canvas"><canvas id="dialsChart"></canvas></div></div>';
-            html += '<div class="chart-card"><div class="chart-title">Sales Funnel (This Week)</div><div class="chart-canvas small"><canvas id="funnelChart"></canvas></div></div>';
+            html += '<div class="chart-card"><div class="chart-title">Sales Funnel (This Week)</div><div class="chart-canvas"><canvas id="funnelChart"></canvas></div></div>';
             html += '<div class="chart-card"><div class="chart-title">Answer Rate % Trend</div><div class="chart-canvas"><canvas id="answerRateChart"></canvas></div></div>';
             html += '<div class="chart-card"><div class="chart-title">Conversion to Booking % Trend</div><div class="chart-canvas"><canvas id="convBookingChart"></canvas></div></div>';
             html += '</div>';
@@ -641,17 +576,13 @@
             const ctx = document.getElementById('dialsChart');
             if (!ctx) return;
             if (charts.dials) charts.dials.destroy();
-
-            const labels = kpiData.map(w => w.weekLabel);
-            const values = kpiData.map(w => w.dials);
-
             charts.dials = new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels,
+                    labels: kpiData.map(w => w.weekLabel),
                     datasets: [{
                         label: 'Dials',
-                        data: values,
+                        data: kpiData.map(w => w.dials),
                         borderColor: '#0EA5E9',
                         backgroundColor: 'rgba(14, 165, 233, 0.08)',
                         borderWidth: 3,
@@ -667,15 +598,15 @@
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
-                    plugins: { legend: { display: false }, filler: { propagate: true } },
+                    plugins: { legend: { display: false } },
                     scales: {
                         y: {
                             beginAtZero: true,
-                            grid: { color: 'rgba(255, 255, 255, 0.08)', drawBorder: false },
-                            ticks: { color: 'rgba(255, 255, 255, 0.7)', font: { size: 11 } }
+                            grid: { color: 'rgba(255,255,255,0.08)' },
+                            ticks: { color: 'rgba(255,255,255,0.7)', font: { size: 11 } }
                         },
                         x: {
-                            ticks: { color: 'rgba(255, 255, 255, 0.7)', font: { size: 11 }, maxRotation: -45, minRotation: -45 },
+                            ticks: { color: 'rgba(255,255,255,0.7)', font: { size: 10 }, maxRotation: 30, minRotation: 0 },
                             grid: { display: false }
                         }
                     }
@@ -687,23 +618,35 @@
             const ctx = document.getElementById('funnelChart');
             if (!ctx) return;
             if (charts.funnel) charts.funnel.destroy();
-
             const week = getCurrentWeek();
-            const data = [week.dials, week.convos, week.pickUps, week.bookedAppointments];
-            const labels = ['Dials', 'Convos', 'Pick Ups', 'Booked'];
-            const colors = ['#0EA5E9', '#3B82F6', '#EC4899', '#00D97E'];
-
             charts.funnel = new Chart(ctx, {
                 type: 'bar',
-                data: { labels, datasets: [{ label: 'Count', data, backgroundColor: colors, borderRadius: 6, borderSkipped: false, barPercentage: 0.7 }] },
+                data: {
+                    labels: ['Dials', 'Pick Ups', 'Convos', 'Booked'],
+                    datasets: [{
+                        label: 'Count',
+                        data: [week.dials, week.pickUps, week.convos, week.bookedAppointments],
+                        backgroundColor: ['#0EA5E9', '#3B82F6', '#EC4899', '#00D97E'],
+                        borderRadius: 6,
+                        borderSkipped: false,
+                        barPercentage: 0.7
+                    }]
+                },
                 options: {
                     indexAxis: 'y',
                     responsive: true,
                     maintainAspectRatio: false,
                     plugins: { legend: { display: false } },
                     scales: {
-                        x: { beginAtZero: true, grid: { color: 'rgba(255, 255, 255, 0.08)', drawBorder: false }, ticks: { color: 'rgba(255, 255, 255, 0.7)', font: { size: 11 } } },
-                        y: { ticks: { color: 'rgba(255, 255, 255, 0.7)', font: { size: 11 } }, grid: { display: false } }
+                        x: {
+                            beginAtZero: true,
+                            grid: { color: 'rgba(255,255,255,0.08)' },
+                            ticks: { color: 'rgba(255,255,255,0.7)', font: { size: 11 } }
+                        },
+                        y: {
+                            ticks: { color: 'rgba(255,255,255,0.7)', font: { size: 12 } },
+                            grid: { display: false }
+                        }
                     }
                 }
             });
@@ -713,20 +656,38 @@
             const ctx = document.getElementById('answerRateChart');
             if (!ctx) return;
             if (charts.answerRate) charts.answerRate.destroy();
-
-            const labels = kpiData.map(w => w.weekLabel);
-            const values = kpiData.map(w => w.answerRate);
-
             charts.answerRate = new Chart(ctx, {
                 type: 'line',
-                data: { labels, datasets: [{ label: 'Answer Rate %', data: values, borderColor: '#00D97E', backgroundColor: 'rgba(0, 217, 126, 0.08)', borderWidth: 3, tension: 0.4, fill: true, pointRadius: 5, pointBackgroundColor: '#00D97E', pointBorderColor: '#1A202C', pointBorderWidth: 2 }] },
+                data: {
+                    labels: kpiData.map(w => w.weekLabel),
+                    datasets: [{
+                        label: 'Answer Rate %',
+                        data: kpiData.map(w => w.answerRate),
+                        borderColor: '#00D97E',
+                        backgroundColor: 'rgba(0,217,126,0.08)',
+                        borderWidth: 3,
+                        tension: 0.4,
+                        fill: true,
+                        pointRadius: 5,
+                        pointBackgroundColor: '#00D97E',
+                        pointBorderColor: '#1A202C',
+                        pointBorderWidth: 2
+                    }]
+                },
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
                     plugins: { legend: { display: false } },
                     scales: {
-                        y: { beginAtZero: true, max: 100, grid: { color: 'rgba(255, 255, 255, 0.08)', drawBorder: false }, ticks: { color: 'rgba(255, 255, 255, 0.7)', font: { size: 11 } } },
-                        x: { ticks: { color: 'rgba(255, 255, 255, 0.7)', font: { size: 11 }, maxRotation: -45, minRotation: -45 }, grid: { display: false } }
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: 'rgba(255,255,255,0.08)' },
+                            ticks: { color: 'rgba(255,255,255,0.7)', font: { size: 11 } }
+                        },
+                        x: {
+                            ticks: { color: 'rgba(255,255,255,0.7)', font: { size: 10 }, maxRotation: 30, minRotation: 0 },
+                            grid: { display: false }
+                        }
                     }
                 }
             });
@@ -736,20 +697,39 @@
             const ctx = document.getElementById('convBookingChart');
             if (!ctx) return;
             if (charts.convBooking) charts.convBooking.destroy();
-
-            const labels = kpiData.map(w => w.weekLabel);
-            const values = kpiData.map(w => w.convToBooking);
-
             charts.convBooking = new Chart(ctx, {
                 type: 'line',
-                data: { labels, datasets: [{ label: 'Conv to Booking %', data: values, borderColor: '#EC4899', backgroundColor: 'rgba(236, 72, 153, 0.08)', borderWidth: 3, tension: 0.4, fill: true, pointRadius: 5, pointBackgroundColor: '#EC4899', pointBorderColor: '#1A202C', pointBorderWidth: 2 }] },
+                data: {
+                    labels: kpiData.map(w => w.weekLabel),
+                    datasets: [{
+                        label: 'Conv to Booking %',
+                        data: kpiData.map(w => w.convToBooking),
+                        borderColor: '#EC4899',
+                        backgroundColor: 'rgba(236,72,153,0.08)',
+                        borderWidth: 3,
+                        tension: 0.4,
+                        fill: true,
+                        pointRadius: 5,
+                        pointBackgroundColor: '#EC4899',
+                        pointBorderColor: '#1A202C',
+                        pointBorderWidth: 2
+                    }]
+                },
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
                     plugins: { legend: { display: false } },
                     scales: {
-                        y: { beginAtZero: true, max: 50, grid: { color: 'rgba(255, 255, 255, 0.08)', drawBorder: false }, ticks: { color: 'rgba(255, 255, 255, 0.7)', font: { size: 11 } } },
-                        x: { ticks: { color: 'rgba(255, 255, 255, 0.7)', font: { size: 11 }, maxRotation: -45, minRotation: -45 }, grid: { display: false } }
+                        y: {
+                            beginAtZero: true,
+                            suggestedMax: 60,
+                            grid: { color: 'rgba(255,255,255,0.08)' },
+                            ticks: { color: 'rgba(255,255,255,0.7)', font: { size: 11 } }
+                        },
+                        x: {
+                            ticks: { color: 'rgba(255,255,255,0.7)', font: { size: 10 }, maxRotation: 30, minRotation: 0 },
+                            grid: { display: false }
+                        }
                     }
                 }
             });
